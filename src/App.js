@@ -1,10 +1,12 @@
+import { hot } from 'react-hot-loader/root';
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const App = ({ title }) => <div>{title}</div>;
-
-App.propTypes = {
-  title: PropTypes.string.isRequired,
+const App = () => {
+  const message = 'React App';
+  return (
+    <div className="app">
+      <h1>{message}</h1>
+    </div>
+  );
 };
-
-export default App;
+export default hot(App);
